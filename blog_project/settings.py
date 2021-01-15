@@ -16,6 +16,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
@@ -40,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig', #added
+    'blog.apps.BlogConfig', # added
+    'accounts.apps.AccountsConfig', # added
 ]
 
 MIDDLEWARE = [
